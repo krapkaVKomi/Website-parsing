@@ -39,7 +39,7 @@ while True:
 
 
 for i in list:
-    print(i)
+    print(i)        # видалити
     url = 'https://www.championat.com' + i
     if not response.ok:
         print(response.status_code, response.text)
@@ -53,7 +53,7 @@ for i in list:
 
         col = row.find_all('td')
         medal = Medal(col[0].text.strip(), col[1].text.strip(), col[2].text.strip(), col[3].text.strip(), col[4].text.strip())
-        print(medal.__str__())
+        print(medal.__str__())     # print(medal)
         row = row.findNext('tr')
 
         if row is None:
